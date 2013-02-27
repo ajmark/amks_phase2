@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  tournament_id: 1
+  event_id: 1
+  min_age: 1
+  max_age: 1
+  round_time: 2013-02-14 21:49:26
+  location: MyString
+  active: false
+
+two:
+  id: 1
+  tournament_id: 1
+  event_id: 1
+  min_age: 1
+  max_age: 1
+  round_time: 2013-02-14 21:49:26
+  location: MyString
+  active: false

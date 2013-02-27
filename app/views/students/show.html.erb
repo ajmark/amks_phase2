@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @student.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @student.date %>
+</p>
+
+<p>
+  <b>Min rank:</b>
+  <%= @student.min_rank %>
+</p>
+
+<p>
+  <b>Max rank:</b>
+  <%= @student.max_rank %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @student.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

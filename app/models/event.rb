@@ -1,9 +1,8 @@
 class Event < ActiveRecord::Base
-  attr_accessible :active, :id, :name
+  attr_accessible :active, :name
   #Relationships
   has_many :sections
   #Validations
-  validates_presence_of :id 
   validates_presence_of :name
   validates_uniqueness_of :name
   #Scopes

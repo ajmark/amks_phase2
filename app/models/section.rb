@@ -1,10 +1,9 @@
 class Section < ActiveRecord::Base
-  attr_accessible :active, :event_id, :id, :max_age, :max_rank, :min_age, :min_rank
+  attr_accessible :active, :event_id, :max_age, :max_rank, :min_age, :min_rank
   #Relationships
   belongs_to :event 
   belongs_to_many :registrations
   #Validations
-  validates_prescence_of :id 
   validates_numericality_of :event_id, :on => :create 	
 
   #Scopes

@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  attr_accessible :active, :date_of_birth, :first_name, :id, :last_name, :phone, :rank, :waiver_signed
+  attr_accessible :active, :date_of_birth, :first_name :last_name, :phone, :rank, :waiver_signed
   #Relationships
   has_many :registrations
   has_many :sections, :through => :registrations
@@ -20,6 +20,7 @@ class Student < ActiveRecord::Base
   scope :has_waiver, where('waiver_signed = ?', true)
   scope :needs_waiver, where('waiver_signed = ?', false)
   scope :by_rank, order_by('rank DESC')
+  
   #Methods
   def name
   	 last_name + ", " + first_name

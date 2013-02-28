@@ -8,6 +8,32 @@ class ActiveSupport::TestCase
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
   fixtures :all
+  def deny(condition)
+  # a simple transformation to increase readability IMO
+  	assert !condition
+  end
 
-  # Add more helper methods to be used by all tests here...
+  def create_event
+  	@breaking = FactoryGirl.create(:event)
+  	@sparring = FactoryGirl.create(:event, :name => "Sparring")
+  	@forms = FactoryGirl.create(:event, :name => "Forms")
+  end 
+
+  def remove_child_context
+    @breaking.destroy
+    @sparring.destroy
+    @forms.destroy
+  end
+
+  def create_student
+  	@alex = FactoryGirl.create(:student)
+  	@chris = FactoryGirl.create(:student, :first_name => "Chris", :date_of_birth => 17.years.ago, :rank => 3, :phone => 1234567890)
+  	@steph = FactoryGirl.create(:student, :first_name => "Steph", :date_of_birth => 15.years.ago, :rank => 1)
+  end   
+
+  def remove_student_content
+  	@alex.destroy
+  	@chris.destroy
+  	@steph.destroy
+  end 
 end

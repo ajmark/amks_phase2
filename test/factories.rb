@@ -8,8 +8,8 @@ FactoryGirl.define do
 	factory :student do 
 		first_name "Alex"
 		last_name "Mark"
-		date_of_birth 5.years.ago
-		rank 3
+		date_of_birth 20.years.ago
+		rank 8
 		phone "6507592924"
 	end 
 	#factory blueprint for section

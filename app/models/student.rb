@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  attr_accessible :active, :date_of_birth, :first_name :last_name, :phone, :rank, :waiver_signed
+  attr_accessible :active, :date_of_birth, :first_name, :last_name, :phone, :rank, :waiver_signed
   #Relationships
   has_many :registrations
   has_many :sections, :through => :registrations
@@ -42,10 +42,12 @@ class Student < ActiveRecord::Base
   	end
   end 
 
-  def age
+  def age(student)
+    Date.today - student.date_of_birth
   end 
 
   def registered_for_section
+    
   end 
 
 

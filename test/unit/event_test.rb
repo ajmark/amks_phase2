@@ -16,11 +16,15 @@ class EventTest < ActiveSupport::TestCase
 		end 
 
 		should "have a scope to alphabetize events" do 
-			assert_equal ["Breaking","Forms","Sparring"], Task.alphabetical.map{|t| t.name}
+			assert_equal ["Breaking","Forms","Sparring"], Event.alphabetical.map{|t| t.name}
 		end  
 
 		should "have a scope to select active tasks only" do 
-			assert_equal ["Breaking","Sparring"], Task.active.alphabetical.map{|t| t.name}
+			assert_equal ["Breaking","Sparring"], Event.active.alphabetical.map{|t| t.name}
+		end 
+
+		should "have a scope to select inactive tasks only" do 
+			assert_equal ["Forms"], Event.inactive.alphabetical.map{|t| t.name}
 		end 
 	end 
 

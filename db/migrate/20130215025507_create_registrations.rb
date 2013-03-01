@@ -1,7 +1,6 @@
 class CreateRegistrations < ActiveRecord::Migration
   def change
     create_table :registrations do |t|
-      t.integer :id
       t.integer :section_id
       t.integer :student_id
       t.date :date

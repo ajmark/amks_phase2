@@ -15,7 +15,7 @@ class Student < ActiveRecord::Base
   scope :seniors, where('date_of_birth <= ?', 18.years.ago)
   scope :active, where('active = ?', true)
   scope :inactive, where('active = ?', false)
-  scope :alphabetical, order('name')
+  scope :alphabetical, order('first_name')
   scope :has_waiver, where('waiver_signed = ?', true)
   scope :needs_waiver, where('waiver_signed = ?', false)
   scope :by_rank, order('rank DESC')
@@ -33,16 +33,16 @@ class Student < ActiveRecord::Base
 	first_name.capitalize + " " + last_name.capitalize
   end 
 
-  def over_18?(student)
-  	if student.date_of_birth <= 18.years.ago
+  def over_18?
+  	if date_of_birth <= 18.years.ago
   		return true 
   	else 
   		return false 
   	end
   end 
 
-  def age(student)
-    Date.today - student.date_of_birth
+  def age
+    Date.today.year - date_of_birth.year
   end 
 
   def registered_for_section

@@ -4,11 +4,10 @@ class Student < ActiveRecord::Base
   has_many :registrations
   has_many :sections, :through => :registrations
   #Validations
-  validates_prescence_of :id 
-  validates_prescence_of :first_name
-  validates_prescence_of :last_name
-  validates_prescence_of :date_of_birth
-  validates_prescence_of :rank
+  validates_presence_of :first_name
+  validates_presence_of :last_name
+  validates_presence_of :date_of_birth
+  validates_presence_of :rank
   validates_date :date_of_birth
   validates_numericality_of :phone
   #Scopes
@@ -19,7 +18,7 @@ class Student < ActiveRecord::Base
   scope :alphabetical, order('name')
   scope :has_waiver, where('waiver_signed = ?', true)
   scope :needs_waiver, where('waiver_signed = ?', false)
-  scope :by_rank, order_by('rank DESC')
+  scope :by_rank, order('rank DESC')
   scope :gups, where('rank <= ?', 10)
   scope :dans, where('rank >= ?', 11) 
   #scope :ranks_between()
@@ -47,7 +46,7 @@ class Student < ActiveRecord::Base
   end 
 
   def registered_for_section
-    
+
   end 
 
 

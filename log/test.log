@@ -6,3 +6,86 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36mFixture Insert (20.7ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:06', '2013-03-01 00:56:06')
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')[0m
+SQLite3::ConstraintException: PRIMARY KEY must be unique: INSERT INTO "events" ("id", "name", "active", "created_at", "updated_at") VALUES (1, 'MyString', 'f', '2013-03-01 00:56:20', '2013-03-01 00:56:20')
+  [1m[35m (0.4ms)[0m  rollback transaction

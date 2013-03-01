@@ -4,11 +4,11 @@ class Student < ActiveRecord::Base
   has_many :registrations
   has_many :sections, :through => :registrations
   #Validations
-  validates_prescemce_of :id 
-  validates_prescemce_of :first_name
-  validates_prescemce_of :last_name
-  validates_prescemce_of :date_of_birth
-  validates_prescemce_of :rank
+  validates_prescence_of :id 
+  validates_prescence_of :first_name
+  validates_prescence_of :last_name
+  validates_prescence_of :date_of_birth
+  validates_prescence_of :rank
   validates_date :date_of_birth
   validates_numericality_of :phone
   #Scopes
@@ -20,6 +20,10 @@ class Student < ActiveRecord::Base
   scope :has_waiver, where('waiver_signed = ?', true)
   scope :needs_waiver, where('waiver_signed = ?', false)
   scope :by_rank, order_by('rank DESC')
+  scope :gups, where('rank <= ?', 10)
+  scope :dans, where('rank >= ?', 11) 
+  #scope :ranks_between()
+  #scope :ages_between()
   
   #Methods
   def name
@@ -31,10 +35,10 @@ class Student < ActiveRecord::Base
   end 
 
   def over_18?(student)
-  	if student.date_of_birth >= 18.years.ago
-  		return false 
-  	else 
+  	if student.date_of_birth <= 18.years.ago
   		return true 
+  	else 
+  		return false 
   	end
   end 
 

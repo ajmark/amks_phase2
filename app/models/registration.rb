@@ -4,8 +4,8 @@ class Registration < ActiveRecord::Base
   belongs_to :student
   belongs_to :section
   #Validations
-  validates_prescece_of :section_id
-  validates_prescece_of :student_id
-  validates_prescece_of :id 
+  validates_presence_of :section_id
+  validates_presence_of :student_id
+  validates_presence_of :id 
   #Scopes
 end

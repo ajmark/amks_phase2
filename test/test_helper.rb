@@ -16,10 +16,10 @@ class ActiveSupport::TestCase
   def create_event
   	@breaking = FactoryGirl.create(:event)
   	@sparring = FactoryGirl.create(:event, :name => "Sparring")
-  	@forms = FactoryGirl.create(:event, :name => "Forms")
+  	@forms = FactoryGirl.create(:event, :name => "Forms", :active => false)
   end 
 
-  def remove_child_context
+  def remove_event
     @breaking.destroy
     @sparring.destroy
     @forms.destroy
@@ -31,7 +31,7 @@ class ActiveSupport::TestCase
   	@steph = FactoryGirl.create(:student, :first_name => "Steph", :date_of_birth => 15.years.ago, :rank => 1)
   end   
 
-  def remove_student_content
+  def remove_student
   	@alex.destroy
   	@chris.destroy
   	@steph.destroy

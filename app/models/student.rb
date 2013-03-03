@@ -21,8 +21,8 @@ class Student < ActiveRecord::Base
   scope :by_rank, order('rank DESC')
   scope :gups, where('rank <= ?', 10)
   scope :dans, where('rank >= ?', 11) 
-  #scope :ranks_between()
-  #scope :ages_between()
+  scope :ranks_between, lambda { |r1, r2| where('rank >= ? and rank <= ?', r1, r2) }
+  scope :ages_between, lambda {|a1, a2| where('date_of_birth >= ? and date_of_birth <= ?', a1, a2)} 
   
   #Methods
   def name

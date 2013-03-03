@@ -66,7 +66,21 @@ class StudentTest < ActiveSupport::TestCase
       assert_equal ["Alex Mark", "Chris Mark", "Steph Mark"], Student.by_rank.alphabetical.map { |s|s.proper_name  }
     end 
 
-    
+    should "have scope to return students between given ranks (inclusive)" do 
+      assert_equal ["Chris Mark", "Steph Mark"], Student.ranks_between(1, 10).alphabetical.map {|s| s.proper_name}
+    end 
+
+    should "have scope to return students between given age(inclusive)" do
+      assert_equal ["Mark, Chris", "Mark, Steph"], Student.ages_between(10, 18).alphabetical.map {|s| s.name}
+    end 
+
+    should "have scope to return all gups" do 
+      assert_equal ["Chris Mark", "Steph Mark"], Student.gups.alphabetical.map { |s| s.proper_name }
+    end 
+
+    should "have scope to return all dans" do 
+      assert_equal ["Alex Mark"], Student.dans.alphabetical.map {|s| s.proper_name}
+    end 
 
   end 
 end

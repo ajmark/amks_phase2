@@ -5,6 +5,7 @@ class EventTest < ActiveSupport::TestCase
 	should have_many(:sections)
 	#Validation Macros
 	should validate_presence_of(:name)
+	should validate_uniqueness_of(:name)
 
 	context "Creating three events" do 
 		setup do 

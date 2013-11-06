@@ -9977,3 +9977,90 @@ Connecting to database specified by database.yml
   [1m[35m (0.0ms)[0m  rollback transaction
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Breaking' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Breaking"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Sparring' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Sparring"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Forms' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", false], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Forms"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" ORDER BY name
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Breaking' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Breaking"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Sparring' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Sparring"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Forms' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", false], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Forms"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (active = 't') ORDER BY name
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Breaking' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Breaking"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Sparring' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", true], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Sparring"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'Forms' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", false], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "Forms"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE (active = 'f') ORDER BY name
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("active", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["active", nil], ["created_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00], ["name", "arbitrary_string"], ["updated_at", Thu, 14 Mar 2013 18:56:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mEvent Exists (0.1ms)[0m  SELECT 1 AS one FROM "events" WHERE "events"."name" = 'arbitrary_string' LIMIT 1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" = 'arbitrary_string' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Exists (0.2ms)[0m  SELECT 1 AS one FROM "events" WHERE "events"."name" IS NULL LIMIT 1
+  [1m[36mEvent Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "events" WHERE "events"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
